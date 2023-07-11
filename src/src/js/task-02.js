@@ -18,5 +18,3 @@ const ingredientsList = ingredients.forEach(function (ingredient) {
  
 });
 
-
-
