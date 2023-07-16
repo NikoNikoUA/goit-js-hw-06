@@ -2,8 +2,8 @@ const textInput = document.querySelector("#validation-input");
 
 textInput.addEventListener("blur", onInputLength);
 
-function onInputLength(event) {
-  if (event.currentTarget.value.length !== Number(textInput.dataset.length)) {
+function onInputLength() {
+  if (textInput.value.length !== Number(textInput.dataset.length)) {
     textInput.classList.add("invalid");
   } else {
     textInput.classList.remove("invalid");
@@ -13,3 +13,7 @@ function onInputLength(event) {
 
 // How to find data - length value (alternative):
 // Number(textInput.getAttribute("data-length")
+
+// OPTION 2:
+// function onInputLength(event) {
+//   if (event.currentTarget.value.length !== Number(textInput.dataset.length)) };
