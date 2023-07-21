@@ -36,22 +36,22 @@
 
 let counterValue = 0;
 
-const buttonDecrement = document.querySelector(
+const buttonDecrease = document.querySelector(
   'button[data-action="decrement"]'
 );
 
-const buttonIncrement = document.querySelector(
+const buttonIncrease = document.querySelector(
   'button[data-action="increment"]'
 );
 
 const counterNumber = document.querySelector("#value");
 
-buttonDecrement.addEventListener("click", () => {
+buttonDecrease.addEventListener("click", () => {
   counterValue -= 1;
   counterNumber.textContent = counterValue;
 });
 
-buttonIncrement.addEventListener("click", () => {
+buttonIncrease.addEventListener("click", () => {
   counterValue += 1;
   counterNumber.textContent = counterValue;
 });
