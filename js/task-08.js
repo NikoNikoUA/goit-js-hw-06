@@ -14,15 +14,14 @@ function onFormSubmit(event) {
   if (email === "" || password === "") {
     console.log(alert("Please, fill in all fields!!!"));
   } else {
+    const inputDataCollection = {
+      email,
+      password,
+    };
+    console.log(inputDataCollection);
+
     loginForm.reset();
   }
-
-  const inputDataCollection = {
-    email,
-    password,
-  };
-
-  console.log(inputDataCollection);
 }
 
 // ===================== OPTION 2 =====================
