@@ -15,16 +15,14 @@ function createBoxes(amount) {
 
   for (let i = 0; i < amount; i += 1) {
     const divEl = document.createElement("div");
-    divEl.style.backgroundColor = `#${Math.floor(Math.random() * 16777215)
-      .toString(16)
-      .padStart(6, 0)}`;
+    divEl.style.backgroundColor = getRandomHexColor();
 
-    divEl.style.width = `${allDiv.reduce((previousvalue) => {
+    const divElWidthandHeight = `${allDiv.reduce((previousvalue) => {
       return previousvalue + 10;
     }, 30)}px`;
-    divEl.style.height = `${allDiv.reduce((previousvalue) => {
-      return previousvalue + 10;
-    }, 30)}px`;
+
+    divEl.style.width = divElWidthandHeight;
+    divEl.style.height = divElWidthandHeight;
 
     allDiv.push(divEl);
     console.log(divEl);
@@ -36,4 +34,10 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   divSectionBoxes.innerHTML = "";
+}
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 }
